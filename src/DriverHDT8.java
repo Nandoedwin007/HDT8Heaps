@@ -39,14 +39,16 @@ public class DriverHDT8 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		//Se crea el vectro heap
 		VectorHeap<String> elementos = new VectorHeap<String>();
 		int i = 0;
 		for(i=0;i<cantLineas;i++)
 		{
+			//se agregan las lineas del documento al vector heap
 			elementos.add(lineas[i]);
 		}
 		for(i=0;i<cantLineas;i++){
+			//Remueve ya en orden del vector heap los elementos ingresados n veces
 			System.out.println(elementos.remove());
 		}
 	}
